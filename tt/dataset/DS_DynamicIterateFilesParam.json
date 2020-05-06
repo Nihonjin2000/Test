@@ -1,0 +1,31 @@
+{
+	"name": "DS_DynamicIterateFilesParam",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Conn_BlobStorage_DynamicIterateFiles",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"CSV_PARAM": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().CSV_PARAM",
+					"type": "Expression"
+				},
+				"container": "antifraud"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
