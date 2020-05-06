@@ -50,7 +50,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "CopyDataToSQL",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -72,6 +72,11 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"preCopyScript": "[poniedziałek 13:59] Robert Kowalski\n    \n\nTRUNCATE TABLE [STG].[@{replace(item().name,'.csv','')}]\n",
+									"disableMetricsCollection": false
+								},
 								"enableStaging": false
 							},
 							"inputs": [
@@ -81,6 +86,18 @@
 									"parameters": {
 										"CSV_PARAM": {
 											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DS_DynamicIterateFilesParamSQL",
+									"type": "DatasetReference",
+									"parameters": {
+										"SQL_PARAM": {
+											"value": "@replace(item().name,'.csv','')",
 											"type": "Expression"
 										}
 									}
