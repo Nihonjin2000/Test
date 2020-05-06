@@ -157,7 +157,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/robert.kowalski.mimciak@gmail.com/Test"
+					"notebookPath": "/Users/robert.kowalski.mimciak@gmail.com/testowyNoteBook01Scala"
 				},
 				"linkedServiceName": {
 					"referenceName": "Conn_DataBricks_DynamicIterateFiles",
