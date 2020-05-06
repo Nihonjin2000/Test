@@ -1,5 +1,5 @@
 {
-	"name": "DS_DynamicIterateFilesParam",
+	"name": "DS_DynamicIterateFilesParamCSV",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Conn_BlobStorage_DynamicIterateFiles",
@@ -23,7 +23,7 @@
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": []
