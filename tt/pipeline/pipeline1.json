@@ -136,6 +136,33 @@
 					"referenceName": "Conn_SQL_DynamicIterateFilesSQL",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Stored Procedure1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/robert.kowalski.mimciak@gmail.com/Test"
+				},
+				"linkedServiceName": {
+					"referenceName": "Conn_DataBricks_DynamicIterateFiles",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
