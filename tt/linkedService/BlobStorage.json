@@ -1,0 +1,10 @@
+{
+	"name": "BlobStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://KVDFactory.vault.azure.net/"
+		}
+	}
+}
