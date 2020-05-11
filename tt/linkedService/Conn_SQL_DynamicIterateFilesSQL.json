@@ -10,7 +10,7 @@
 					"referenceName": "Database",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "new4"
+				"secretName": "SQLDatabaseKey"
 			}
 		}
 	},
